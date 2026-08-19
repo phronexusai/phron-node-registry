@@ -2,5 +2,17 @@
   "schemaVersion": 1,
   "publisher": "phronexusai",
   "baseUrl": "https://github.com/phronexusai/phron-node-registry/releases/download",
-  "packages": []
+  "packages": [
+    {
+      "name": "phron",
+      "version": "0.1.0",
+      "os": "linux",
+      "arch": "x86_64",
+      "filename": "phron-linux-x86_64.tar.gz",
+      "url": "https://github.com/phronexusai/phron-node-registry/releases/download/v0.1.0/phron-linux-x86_64.tar.gz",
+      "sha256": "906117397a5e534f2d75e789ab3ec3998a9ede84ab93af5253423da745f8cd64",
+      "size": 6006564,
+      "binaries": ["phron", "phron-cli"]
+    }
+  ]
 }
