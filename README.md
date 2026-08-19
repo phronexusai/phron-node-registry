@@ -2,8 +2,12 @@
 
 Public index and GitHub Release assets for prebuilt **Phron** node and CLI binaries (`phron`, `phron-cli`) on supported platforms.
 
-Node source lives in the private **phron-node** repo. Nexus advertises a target version; nodes download verified artifacts from this registry.
+Source: private **[phron-node](https://github.com/phronexusai/phron-node)**.
 
-## Status
+## Index
 
-Empty scaffold. Version index and Release binaries will be added when node builds are published.
+[`versions.json`](./versions.json) — version list (`os`, `arch`, `filename`, `sha256`). Empty until the first node binary release.
+
+```
+https://raw.githubusercontent.com/phronexusai/phron-node-registry/main/versions.json
+```
