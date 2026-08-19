@@ -1,8 +1,6 @@
 # phron-node-registry
 
-Public index and GitHub Release assets for prebuilt **Phron** node and CLI binaries (`phron`, `phron-cli`) on supported platforms.
-
-Source: private **[phron-node](https://github.com/phronexusai/phron-node)**.
+Public index and GitHub Release assets for prebuilt **Phron** node and CLI binaries (`phron`, `phron-cli`) on supported platforms. This tree is the catalog plus published archives, not the node source.
 
 ## Index
 
