@@ -2,6 +2,14 @@
 
 Public index and GitHub Release assets for prebuilt **Phron** node binaries (`phron`) on supported platforms. This tree is the catalog plus published archives, not the node source.
 
+## Install
+
+Linux (detects the platform, verifies the archive, seeds Phron’s folders):
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/phronexusai/phron-node-registry/main/scripts/install.sh | bash
+```
+
 ## Index
 
 [`versions.json`](./versions.json) — version list (`os`, `arch`, `filename`, `sha256`).
@@ -11,8 +19,6 @@ https://raw.githubusercontent.com/phronexusai/phron-node-registry/main/versions.
 ```
 
 Releases: https://github.com/phronexusai/phron-node-registry/releases
-
-One GitHub Release per version (`v0.1.0`, …). Platform is the **asset filename**, not the release title — later linux/darwin archives share the same tag.
 
 ## Current packages
 
