@@ -11,7 +11,7 @@
 #   PHRON_INDEX_URL   package index (default: GitHub raw versions.json)
 #   PHRON_VERSION     pin a version (same as --version)
 #   PHRON_BIN_DIR     where to place the binary (default: ~/.local/bin)
-#   RUST_LLM_DATA_DIR Phron data dir (default: ~/.local/share/rust-llm-server)
+#   PHRON_DATA_DIR    Phron data dir (default: ~/.local/share/phron)
 #
 # Do not use sudo. This is a user install.
 
@@ -24,8 +24,7 @@ ISSUES_PAGE="https://github.com/phronexusai/phron-node-registry/issues"
 BIN_DIR="${PHRON_BIN_DIR:-${HOME}/.local/bin}"
 # systemd workdir used by `phron enroll` / `phron install` when none is passed
 WORK_DIR="${XDG_DATA_HOME:-${HOME}/.local/share}/phron"
-# do not rename — Phron's XDG data dir is rust-llm-server
-DATA_DIR="${RUST_LLM_DATA_DIR:-${XDG_DATA_HOME:-${HOME}/.local/share}/rust-llm-server}"
+DATA_DIR="${PHRON_DATA_DIR:-$WORK_DIR}"
 
 PINNED_VERSION="${PHRON_VERSION:-}"
 
@@ -276,6 +275,14 @@ mkdir -p "$BIN_DIR" "$WORK_DIR" \
 
 cp -f "$EXTRACT/phron" "$BIN_DIR/phron"
 chmod 755 "$BIN_DIR/phron"
+
+if ! HELP_OUT="$("$BIN_DIR/phron" --help 2>&1)"; then
+  if printf '%s' "$HELP_OUT" | grep -q 'GLIBC_'; then
+    die "this Phron build cannot start on this machine (GNU C library is too old)"
+  fi
+  die "phron did not start:
+$HELP_OUT"
+fi
 
 if [[ -f "$EXTRACT/config.toml.example" ]]; then
   cp -f "$EXTRACT/config.toml.example" "$WORK_DIR/config.toml.example"
