@@ -24,6 +24,7 @@ Releases: https://github.com/phronexusai/phron-node-registry/releases
 
 | Name | Version | OS | Arch | Asset |
 |------|---------|----|------|-------|
+| `phron` | `0.1.1` | linux | x86_64 | `phron-linux-x86_64.tar.gz` |
 | `phron` | `0.1.0` | linux | x86_64 | `phron-linux-x86_64.tar.gz` |
 
 ```bash
