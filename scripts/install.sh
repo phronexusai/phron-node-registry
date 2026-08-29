@@ -271,10 +271,17 @@ tar -xzf "$ARCHIVE" -C "$EXTRACT"
 [[ -f "$EXTRACT/phron" ]] || die "archive did not contain a phron binary"
 
 mkdir -p "$BIN_DIR" "$WORK_DIR" \
-  "$DATA_DIR/engines" "$DATA_DIR/models" "$DATA_DIR/downloads"
+  "$DATA_DIR/engines" "$DATA_DIR/models" "$DATA_DIR/downloads" "$DATA_DIR/updates"
 
 cp -f "$EXTRACT/phron" "$BIN_DIR/phron"
 chmod 755 "$BIN_DIR/phron"
+
+# phron-updater installs later releases and restarts the node. Archives from
+# Phron 0.1.3 and earlier do not carry it.
+if [[ -f "$EXTRACT/phron-updater" ]]; then
+  cp -f "$EXTRACT/phron-updater" "$BIN_DIR/phron-updater"
+  chmod 755 "$BIN_DIR/phron-updater"
+fi
 
 if ! HELP_OUT="$("$BIN_DIR/phron" --help 2>&1)"; then
   if printf '%s' "$HELP_OUT" | grep -q 'GLIBC_'; then
@@ -297,6 +304,9 @@ fi
 printf '\n'
 log "Phron ${VERSION} is installed"
 printf '    binary:  %s\n' "${BIN_DIR}/phron"
+if [[ -f "$BIN_DIR/phron-updater" ]]; then
+  printf '    updater: %s\n' "${BIN_DIR}/phron-updater"
+fi
 printf '    config:  %s\n' "${WORK_DIR}/config.toml"
 printf '    data:    %s\n' "${DATA_DIR}"
 printf '\n'
