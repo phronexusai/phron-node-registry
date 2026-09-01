@@ -5,6 +5,7 @@
   "packages": [
     {
       "name": "phron",
+<<<<<<< HEAD
       "version": "0.1.4",
       "os": "linux",
       "arch": "x86_64",
@@ -17,6 +18,18 @@
     {
       "name": "phron",
       "version": "0.1.2",
+=======
+      "version": "0.1.5",
+      "os": "linux",
+      "arch": "x86_64",
+      "filename": "phron-linux-x86_64.tar.gz",
+      "url": "https://github.com/phronexusai/phron-node-registry/releases/download/v0.1.5/phron-linux-x86_64.tar.gz",
+      "sha256": "a1cec59661a8beb405187ac8a391369c3606edcd7af8d3417ee8b1afc7e46100",
+      "size": 5398457,
+      "binaries": ["phron", "phron-updater"]
+    },
+    {
+>>>>>>> 52e7327 (Add Phron 0.1.5 to the node registry index.)
       "os": "linux",
       "arch": "x86_64",
       "filename": "phron-linux-x86_64.tar.gz",
