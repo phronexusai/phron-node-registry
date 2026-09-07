@@ -10,8 +10,8 @@
       "arch": "x86_64",
       "filename": "phron-linux-x86_64.tar.gz",
       "url": "https://github.com/phronexusai/phron-node-registry/releases/download/v0.2.0/phron-linux-x86_64.tar.gz",
-      "sha256": "a05616fda074755ba41ba1918cc3571ae6bb8b1cd42599edef42fda05ff404b8",
-      "size": 4907402,
+      "sha256": "e83b4a040ffdea43cdad062fbda690398eae66c8242fa0f84d769a0a99ecd8fe",
+      "size": 13017336,
       "binaries": [
         "phron",
         "phron-updater"

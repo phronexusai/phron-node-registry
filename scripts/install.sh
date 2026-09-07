@@ -283,6 +283,28 @@ if [[ -f "$EXTRACT/phron-updater" ]]; then
   chmod 755 "$BIN_DIR/phron-updater"
 fi
 
+# Embeddable Lemonade ships under vendor/lemonade from Phron 0.2.0 onward.
+# Install it under the data dir so the node finds it without a separate fetch.
+LEMONADE_SRC="$EXTRACT/vendor/lemonade"
+if [[ -f "$LEMONADE_SRC/lemond" ]]; then
+  LEMONADE_DEST="$DATA_DIR/lemonade/package"
+  rm -rf "$LEMONADE_DEST"
+  mkdir -p "$(dirname "$LEMONADE_DEST")"
+  cp -a "$LEMONADE_SRC" "$LEMONADE_DEST"
+  chmod 755 "$LEMONADE_DEST/lemond"
+  [[ -f "$LEMONADE_DEST/lemonade" ]] && chmod 755 "$LEMONADE_DEST/lemonade"
+  log "installed Lemonade runtime at ${LEMONADE_DEST}"
+else
+  case "$VERSION" in
+    0.0.*|0.1.*)
+      # Pre-Lemonade archives never bundled a runtime.
+      ;;
+    *)
+      die "archive for Phron ${VERSION} is missing vendor/lemonade/lemond — cannot install a working node"
+      ;;
+  esac
+fi
+
 if ! HELP_OUT="$("$BIN_DIR/phron" --help 2>&1)"; then
   if printf '%s' "$HELP_OUT" | grep -q 'GLIBC_'; then
     die "this Phron build cannot start on this machine (GNU C library is too old)"
@@ -306,6 +328,9 @@ log "Phron ${VERSION} is installed"
 printf '    binary:  %s\n' "${BIN_DIR}/phron"
 if [[ -f "$BIN_DIR/phron-updater" ]]; then
   printf '    updater: %s\n' "${BIN_DIR}/phron-updater"
+fi
+if [[ -x "${DATA_DIR}/lemonade/package/lemond" ]]; then
+  printf '    lemonade: %s\n' "${DATA_DIR}/lemonade/package"
 fi
 printf '    config:  %s\n' "${WORK_DIR}/config.toml"
 printf '    data:    %s\n' "${DATA_DIR}"
