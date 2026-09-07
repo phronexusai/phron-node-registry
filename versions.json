@@ -5,6 +5,20 @@
   "packages": [
     {
       "name": "phron",
+      "version": "0.2.0",
+      "os": "linux",
+      "arch": "x86_64",
+      "filename": "phron-linux-x86_64.tar.gz",
+      "url": "https://github.com/phronexusai/phron-node-registry/releases/download/v0.2.0/phron-linux-x86_64.tar.gz",
+      "sha256": "a05616fda074755ba41ba1918cc3571ae6bb8b1cd42599edef42fda05ff404b8",
+      "size": 4907402,
+      "binaries": [
+        "phron",
+        "phron-updater"
+      ]
+    },
+    {
+      "name": "phron",
       "version": "0.1.6",
       "os": "linux",
       "arch": "x86_64",
@@ -12,7 +26,10 @@
       "url": "https://github.com/phronexusai/phron-node-registry/releases/download/v0.1.6/phron-linux-x86_64.tar.gz",
       "sha256": "6dc13128ec4fe39ac56a63cf631f417dfb11f58ff7b23a2200ff9f8287a2808a",
       "size": 5438839,
-      "binaries": ["phron", "phron-updater"]
+      "binaries": [
+        "phron",
+        "phron-updater"
+      ]
     },
     {
       "name": "phron",
@@ -23,7 +40,10 @@
       "url": "https://github.com/phronexusai/phron-node-registry/releases/download/v0.1.5/phron-linux-x86_64.tar.gz",
       "sha256": "a1cec59661a8beb405187ac8a391369c3606edcd7af8d3417ee8b1afc7e46100",
       "size": 5398457,
-      "binaries": ["phron", "phron-updater"]
+      "binaries": [
+        "phron",
+        "phron-updater"
+      ]
     },
     {
       "name": "phron",
@@ -34,7 +54,10 @@
       "url": "https://github.com/phronexusai/phron-node-registry/releases/download/v0.1.4/phron-linux-x86_64.tar.gz",
       "sha256": "913fa03faa51ce47d8e7e4cbca25f1fa23608a1784f1e83ec474aeef8f95bfc2",
       "size": 4699180,
-      "binaries": ["phron", "phron-updater"]
+      "binaries": [
+        "phron",
+        "phron-updater"
+      ]
     },
     {
       "name": "phron",
@@ -45,7 +68,9 @@
       "url": "https://github.com/phronexusai/phron-node-registry/releases/download/v0.1.2/phron-linux-x86_64.tar.gz",
       "sha256": "e2d4193c00c6dcedd5e71ad193da0e6931ed247ab8ac11e3fc60b603def69716",
       "size": 4240372,
-      "binaries": ["phron"]
+      "binaries": [
+        "phron"
+      ]
     },
     {
       "name": "phron",
@@ -56,7 +81,9 @@
       "url": "https://github.com/phronexusai/phron-node-registry/releases/download/v0.1.1/phron-linux-x86_64.tar.gz",
       "sha256": "11902b11f86d90a66c2f832ce508265e137d21c0f742c62d7e9d09b702bcd8b8",
       "size": 4022641,
-      "binaries": ["phron"]
+      "binaries": [
+        "phron"
+      ]
     },
     {
       "name": "phron",
@@ -67,7 +94,9 @@
       "url": "https://github.com/phronexusai/phron-node-registry/releases/download/v0.1.0/phron-linux-x86_64.tar.gz",
       "sha256": "445149bb01f2f4ccc56e41d3c6f2218347d7ec3bfdb68a13b7208f529ebf3db7",
       "size": 4020274,
-      "binaries": ["phron"]
+      "binaries": [
+        "phron"
+      ]
     }
   ]
 }
