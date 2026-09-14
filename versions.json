@@ -5,6 +5,20 @@
   "packages": [
     {
       "name": "phron",
+      "version": "0.2.22",
+      "os": "linux",
+      "arch": "x86_64",
+      "filename": "phron-linux-x86_64.tar.gz",
+      "url": "https://github.com/phronexusai/phron-node-registry/releases/download/v0.2.22/phron-linux-x86_64.tar.gz",
+      "sha256": "50179f77883fdaa4cc4e43dec3f1a53d99fc09b4ec90feba742aaccc5ecaef1e",
+      "size": 13231768,
+      "binaries": [
+        "phron",
+        "phron-updater"
+      ]
+    },
+    {
+      "name": "phron",
       "version": "0.2.21",
       "os": "linux",
       "arch": "x86_64",
