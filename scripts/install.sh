@@ -138,7 +138,16 @@ if pin:
     pkgs = [p for p in pkgs if str(p.get("version", "")) == pin]
 if not pkgs:
     sys.exit(2)
-pkg = sorted(pkgs, key=lambda p: str(p.get("version", "")), reverse=True)[0]
+# Numeric semver key — string sort wrongly prefers 0.2.9 over 0.2.17.
+def ver_key(v):
+    parts = []
+    for p in str(v).split("."):
+        try:
+            parts.append(int(p))
+        except ValueError:
+            parts.append(0)
+    return tuple(parts)
+pkg = sorted(pkgs, key=lambda p: ver_key(p.get("version", "")), reverse=True)[0]
 for key in ("url", "sha256", "version", "filename"):
     if not pkg.get(key):
         sys.exit(3)
