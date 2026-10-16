@@ -2,7 +2,20 @@
   "schemaVersion": 1,
   "publisher": "phronexusai",
   "baseUrl": "https://github.com/phronexusai/phron-node-registry/releases/download",
-  "packages": [
+    "packages": [
+    {
+      "name": "phron",
+      "version": "0.2.67",
+      "os": "windows",
+      "arch": "x86_64",
+      "filename": "PhronSetup.exe",
+      "url": "https://github.com/phronexusai/phron-node-registry/releases/download/v0.2.66/PhronSetup.exe",
+      "sha256": "10e35e9e82ab065efc6d17cfd38e6e1dbbdd8fc9ab57549c2bdeb016788f7fd1",
+      "size": 40768236,
+      "binaries": [
+        "PhronSetup.exe"
+      ]
+    },
     {
       "name": "phron",
       "version": "0.2.66",

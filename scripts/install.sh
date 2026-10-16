@@ -201,7 +201,8 @@ platform_hint() {
       printf '%s\n' "macOS builds are not published yet. A Darwin script can live beside this one later."
       ;;
     windows)
-      printf '%s\n' "Windows is not published yet. A PowerShell installer (scripts/install.ps1) can sit beside this script later."
+      printf '%s\n' "Windows uses one installer, PhronSetup.exe. On the Nexus node page choose Windows and run that PowerShell command. It installs Phron and Lemonade and enrolls this PC."
+      printf '%s\n' "https://github.com/phronexusai/phron-node-registry/releases/latest/download/PhronSetup.exe"
       ;;
     linux)
       printf '%s\n' "A Linux build exists, but not for this CPU. x86_64 (amd64) is the current target."
