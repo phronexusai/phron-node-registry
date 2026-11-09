@@ -5,13 +5,13 @@
   "packages": [
     {
       "name": "phron",
-      "version": "0.2.90",
+      "version": "0.2.91",
       "os": "windows",
       "arch": "x86_64",
       "filename": "PhronSetup.exe",
       "url": "https://github.com/phronexusai/phron-node-registry/releases/download/v0.2.66/PhronSetup.exe",
-      "sha256": "f279c4e8acfe1637f4bf0f7efa928234fa67b786e10b6b86ce4f6c5be47a5b3b",
-      "size": 41232557,
+      "sha256": "d410232dd444cb0c852ea346fbd8dddc4d670127dce1c5dc00712dc8928194d9",
+      "size": 41229935,
       "binaries": [
         "PhronSetup.exe"
       ]
